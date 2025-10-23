@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coming Soon - HARMON</title>
     <meta name="description" content="Something special is coming. Be the first to know.">
-    
+
     <style>
         * {
             margin: 0;
@@ -109,21 +109,21 @@
                 max-width: 250px;
                 margin-bottom: 3rem;
             }
-            
+
             .description {
                 font-size: 1.1rem;
                 margin-bottom: 3rem;
             }
-            
+
             .email-form {
                 flex-direction: column;
                 gap: 15px;
             }
-            
+
             .email-input {
                 width: 100%;
             }
-            
+
             .submit-button {
                 width: 100%;
                 margin-left: 0;
@@ -134,20 +134,34 @@
 <body>
     <div class="container">
         <img src="harmon-logo.jpeg" alt="HARMON" class="logo">
-        
+
         <p class="description">
             We are currently working on something extraordinary. Subscribe now before launch and receive exclusive gifts and special discounts when we open.
         </p>
-        
-        <form class="email-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+
+        <!-- ✅ Mailchimp Form Integration -->
+        <form 
+            action="https://XXXX.list-manage.com/subscribe/post?u=AAAA&id=BBBB" 
+            method="post" 
+            target="_self" 
+            novalidate 
+            class="email-form"
+        >
+            <input type="hidden" name="redirect" value="https://harmonclothing.com/success.html">
+
             <input 
                 type="email" 
-                name="email"
+                name="EMAIL"
                 class="email-input" 
                 placeholder="Email" 
                 required
             >
             <button type="submit" class="submit-button">Sign Up</button>
+
+            <!-- Mailchimp honeypot (spam protection) -->
+            <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                <input type="text" name="b_AAAA_BBBB" tabindex="-1" value="">
+            </div>
         </form>
     </div>
 </body>
