@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon - HARMON</title>
+    <meta name="description" content="Something special is coming. Be the first to know.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            background-color: #e6ddd4;
+            color: #2d2d2d;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .logo {
+            max-width: 400px;
+            width: 100%;
+            height: auto;
+            margin-bottom: 4rem;
+        }
+
+        .description {
+            font-size: 1.25rem;
+            font-weight: 300;
+            line-height: 1.8;
+            margin-bottom: 4rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #4a4a4a;
+        }
+
+        .email-form {
+            display: flex;
+            gap: 0;
+            max-width: 600px;
+            margin: 0 auto;
+            align-items: center;
+        }
+
+        .email-input {
+            flex: 1;
+            padding: 18px 25px;
+            border: 1px solid #3a3a3a;
+            background: transparent;
+            border-radius: 50px;
+            color: #2d2d2d;
+            font-size: 1rem;
+            font-weight: 300;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+
+        .email-input::placeholder {
+            color: #6a6a6a;
+            font-weight: 300;
+        }
+
+        .email-input:focus {
+            border-color: #1a1a1a;
+        }
+
+        .submit-button {
+            padding: 18px 40px;
+            background: #3a3f47;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-left: -50px;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        .submit-button:hover {
+            background: #2a2f37;
+            transform: translateX(2px);
+        }
+
+        .submit-button:active {
+            transform: translateX(0);
+        }
+
+        @media (max-width: 600px) {
+            .logo {
+                max-width: 250px;
+                margin-bottom: 3rem;
+            }
+
+            .description {
+                font-size: 1.1rem;
+                margin-bottom: 3rem;
+            }
+
+            .email-form {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .email-input {
+                width: 100%;
+            }
+
+            .submit-button {
+                width: 100%;
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="harmon-logo.jpeg" alt="HARMON" class="logo">
+
+        <p class="description">
+            We are currently working on something extraordinary. Subscribe now before launch and receive exclusive gifts and special discounts when we open.
+        </p>
+
+        <!-- ✅ Mailchimp Form Integration (final) -->
+        <form 
+            action="https://harmonclothing.us15.list-manage.com/subscribe/post?u=dc10173809f32f98ad78faabf&id=9c24dec7d0&f_id=00f4e9e1f0" 
+            method="post" 
+            target="_self" 
+            novalidate 
+            class="email-form"
+        >
+            <!-- Redirect to branded Thank You page -->
+            <input type="hidden" name="redirect" value="https://harmonclothing.com/success.html">
+
+            <input 
+                type="email" 
+                name="EMAIL"
+                class="email-input" 
+                placeholder="Email" 
+                required
+            >
+            <button type="submit" class="submit-button">Sign Up</button>
+
+            <!-- Mailchimp honeypot (spam protection) -->
+            <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                <input type="text" name="b_dc10173809f32f98ad78faabf_9c24dec7d0" tabindex="-1" value="">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
